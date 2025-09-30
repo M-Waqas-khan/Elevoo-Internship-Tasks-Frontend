@@ -1,0 +1,45 @@
+                                              <!-- Personal Blog Homepage -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>My Personal Blog</h1>
+  </header>
+
+  <section class="controls">
+    <div class="filter-group">
+      <label>Filter by category:</label>
+      <select id="category-filter">
+        <option value="all">All</option>
+        <option value="Tech">Tech</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+      </select>
+    </div>
+
+    <div class="search-group">
+      <input type="text" id="search-input" placeholder="Search posts by title..." />
+    </div>
+  </section>
+
+  <section id="posts-container" class="posts-container">
+    <!-- Blog post cards will be injected here -->
+  </section>
+
+  <section class="pagination">
+    <button id="prev-btn" disabled>Prev</button>
+    <span id="page-info"></span>
+    <button id="next-btn">Next</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

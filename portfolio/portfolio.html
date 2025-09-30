@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Portfolio</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero reveal">
+    <div class="hero-text">
+      <h1>Hello, I am</h1>
+      <h2>MUHAMMAD WAQAS</h2>
+      <p>Frontend Developer | Graphic Designer | Python Developer<br>
+        I create simple, modern, and user-friendly digital solutions.</p>
+      <a href="#services" class="btn-primary">My Services</a>
+    </div>
+    <div class="hero-image">
+      <img src="picture.png" >
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>I am a <b>BS SOFTWARE ENGINEERING</b> student at <b>RIPHAH INTERNATIONAL UNIVERSITY ISLAMABAD</b>, currently in my <b>5th semester</b>.
+    I am passionate about learning and improving my skills in <b>Frontend Development, Graphic Design, and Python Programming</b>.
+    enjoy building creative solutions, exploring new technologies, and working on projects that combine design and development to solve real problems.</p>
+  </section>
+
+    <section id="services" class="reveal">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Responsive and modern websites built with clean, efficient code.</p>
+      </div>
+      <div class="service-card">
+        <h3>Graphic Design</h3>
+        <p>Creative and eye-catching visuals that match your brand identity.</p>
+      </div>
+      <div class="service-card">
+        <h3>Python Projects</h3>
+        <p>Custom Python scripts and solutions for automation and data tasks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <p><b>Email:</b> mwaqasse27@gmail.com</p>
+    <p><b>Phone:</b> +92 311 5561062</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Muhammad Waqas. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll reveal script
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (const r of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = r.getBoundingClientRect().top;
+        const revealPoint = 150;
+        if (elementTop < windowHeight - revealPoint) {
+          r.classList.add("active");
+        } else {
+          r.classList.remove("active");
+        }
+      }
+    });
+    // trigger at load
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+</body>
+</html>

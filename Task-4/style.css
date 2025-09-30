@@ -1,0 +1,240 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #0077ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(135deg, #0077ff 0%, #00d4ff 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 20px 80px;
+  border-radius: 0 0 60px 60px;
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.4);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+header button {
+  background-color: #fff;
+  color: #0077ff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.6);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header button:hover {
+  background-color: #005fcc;
+  color: white;
+}
+
+/* Features Section */
+/* Center three cards in a single row without wrapping */
+/* Center three cards in a single row without wrapping and add vertical spacing */
+section.features,
+section.pricing {
+  display: flex;
+  justify-content: center;  /* center cards horizontally */
+  gap: 40px;
+  flex-wrap: nowrap;        /* no wrapping */
+  padding: 40px 0;
+  margin: 40px 0;
+
+  max-width: 1200px;        /* optional: limit max width */
+  margin-left: auto;        /* center container horizontally */
+  margin-right: auto;
+}
+
+
+.feature {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+.feature:hover {
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.3);
+}
+.feature-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #0077ff;
+}
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.feature-desc {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Reviews Section */
+section.reviews {
+  background: #0077ff;
+  color: white;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+.review {
+  max-width: 700px;
+  margin: 20px auto;
+  font-style: italic;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 30px;
+}
+.review::before {
+  content: "“";
+  font-size: 4rem;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.reviewer {
+  text-align: right;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Pricing Section */
+section.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.plan {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+.plan:hover {
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.3);
+}
+.plan-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0077ff;
+}
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.plan-features {
+  list-style: none;
+  color: #555;
+  font-size: 1rem;
+  padding-left: 0;
+}
+.plan-features li {
+  margin-bottom: 10px;
+}
+.plan-button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+.plan-button:hover {
+  background-color: #005fcc;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 0 0 20px 20px;
+}
+footer a {
+  color: #0077ff;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #00d4ff;
+}
+footer p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section.features,
+  section.pricing {
+    grid-template-columns: 1fr;
+  }
+}

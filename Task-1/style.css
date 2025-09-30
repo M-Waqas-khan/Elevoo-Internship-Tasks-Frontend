@@ -1,0 +1,97 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and main layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease; /* Smooth transition for opening and closing */
+    padding-top: 40px;
+    z-index: 1000;
+    border-right: 2px solid #444; /* Slight border for depth */
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Menu styling */
+.sidebar .menu {
+    list-style-type: none;
+}
+
+.sidebar .menu li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align icons and text */
+    gap: 20px; /* Space between icon and text */
+    padding: 10px 0;
+    transition: all 0.3s ease; /* Smooth hover transition */
+    padding-left: 30px; /* Add some padding to make it look aligned */
+}
+
+/* Icon styling */
+.icon {
+    font-size: 24px; /* Bigger icon size for better visibility */
+    transition: transform 0.3s ease; /* Hover scale effect */
+}
+
+/* Hover Effects */
+.sidebar .menu a:hover {
+    background-color: #444; /* Darken the background on hover */
+    color: #00bcd4; /* Light cyan text color */
+    border-radius: 4px; /* Rounded corners on hover */
+}
+
+.sidebar .menu a:hover .icon {
+    transform: scale(1.2); /* Slight scale effect for icons on hover */
+}
+
+/* Toggle button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the toggle button */
+.toggle-btn:hover {
+    background-color: #444;
+}
